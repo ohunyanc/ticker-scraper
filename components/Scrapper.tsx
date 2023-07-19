@@ -27,7 +27,7 @@ const Scrapper = () => {
           onChange={(e) => setInput(e.target.value)}
           type="text"
           className="rounded-md border-2 border-gray-300 text-black p-2"
-          placeholder="Enter Ticker"
+          placeholder="Enter Stock Ticker"
         />
         <button
           onClick={getDownloads}
