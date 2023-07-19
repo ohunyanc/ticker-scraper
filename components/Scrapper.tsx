@@ -6,7 +6,7 @@ const Scrapper = () => {
   const [input, setInput] = useState<string>("");
 
   const getDownloads = async () => {
-    const res = await fetch("http://localhost:3000/api/getDownloads", {
+    const res = await fetch("https://ticker-scraper.vercel.app/api/getDownloads", {
       method: "POST",
       body: JSON.stringify({ input }),
     });
@@ -19,6 +19,9 @@ const Scrapper = () => {
     <div className="flex w-screen h-screen items-center justify-center bg-black p-24">
       {/*input*/}
       <div className="flex flex-col items-center gap-6">
+        <div className="p-4">
+          <h1 className="text-white text-xl font-bold">Enter Ticker for Price Update</h1>
+        </div>
         <input
           value={input}
           onChange={(e) => setInput(e.target.value)}
